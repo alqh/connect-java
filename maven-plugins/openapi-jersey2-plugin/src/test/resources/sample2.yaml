@@ -176,6 +176,32 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/com.bluetrainsoftware.AddProps2"
+  /search:
+    get:
+      tags:
+        - TestService
+      operationId: search
+      parameters:
+        - name: search_param_one
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: search_param_two
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TestDTO"
   /one-off:
     post:
       tags:
