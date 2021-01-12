@@ -333,7 +333,6 @@ components:
           type: object
           additionalProperties:
             type: number
-            format: decimal
         extra:
           type: object
           additionalProperties:
